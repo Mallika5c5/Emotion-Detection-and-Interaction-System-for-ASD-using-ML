@@ -1,0 +1,14 @@
+# Ignore virtual environments
+# Ignore Python environment and large files
+autism_env/
+__pycache__/
+*.pyd
+*.dll
+*.exe
+*.so
+*.h5
+*.ckpt
+*.zip
+*.tar.gz
+*.log
+.DS_Store

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.treehugger.com/thmb/CElfxbRUxmpQ1qAVYG6C2ibOsVg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/large-group-of-joyful-kids-running-with-a-kite-in-springtime--1185810377-dcb01232039742648e6c978b22d94991.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.999; /* Adjust the opacity value */
+            display: flex;
+            /* Align content to the right */
+            justify-content: center; 
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login-container, #signup-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with reduced opacity */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            outline: none;
+            border-color: #ff8c00;
+        }
+
+        button {
+            background-color: #ff8c00;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff9f34;
+        }
+
+        .toggle-button {
+            margin-top: 10px;
+            background-color: transparent;
+            border: none;
+            color: #ff8c00;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .toggle-button:hover {
+            text-decoration: underline;
+        }
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 250px; /* Adjust logo width as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="static/images/autism logo.png" alt="Logo" id="logo">
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="/login" method="POST">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <button type="button" onclick="toggleForm()" class="toggle-button">Sign Up</button>
+        </form>
+    </div>
+    <div id="signup-container" style="display:none;">
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="/signup" method="POST">
+            <input type="text" id="new-username" name="new_username" placeholder="Username" required>
+            <input type="password" id="new-password" name="new_password" placeholder="Password" required>
+            <button type="submit">Register</button>
+            <button type="button" onclick="toggleForm()" class="toggle-button">Go to Login</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <!-- <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '6629a38c0cf9de6c65f39313' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script> -->
+     

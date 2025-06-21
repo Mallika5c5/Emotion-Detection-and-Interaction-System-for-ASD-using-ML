@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Emotion History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Detected Emotion History</h2>
+        {% if emotions %}
+            <ul class="list-group mt-3">
+                {% for e in emotions %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>{{ e.emotion }}</span>
+                        <small class="text-muted">{{ e.time }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No emotions detected yet.</p>
+        {% endif %}
+        <a href="home.html" class="btn btn-primary mt-3">Back to Home</a>
+    </div>
+</body>
+</html>
