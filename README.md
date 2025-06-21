@@ -1,130 +1,73 @@
+Emotion Detection & Interaction System for Autism Spectrum Disorder
+A Flask + frontend app that:
 
-# Autism Early Diagnosis and Support Platform
+Detects faces and recognizes emotions in real time (up to 500 emotion classes).
 
-<p align="center">
-  <img src="website1.png" alt="Website Example 1" width="70%" />
-</p>
+Stores emotions temporarily in memory during the session.
 
-## Introduction
+Displays detected emotion history.
 
-Welcome to the Autism Early Diagnosis and Support Platform! This platform aims to assist parents in the early diagnosis of autism in their children and provides an interactive chatbot that engages with children with autism as a friendly persona. The platform is built with Flask and includes an integrated chatbot powered by GPT-3.5 turbo.
+Includes a chatbot that interacts based on the live-emotion context.
 
-## Features
+1. Prerequisites
+Python 3.6+ and pip
 
-1. **Early Diagnosis Guidance**: The chatbot guides parents through the process of early diagnosis of autism.
-2. **Interactive Chatbot**: The chatbot interacts with children with autism as a friendly persona to provide support and companionship.
-3. **User Authentication**: Secure login and signup system to ensure only authorized users can access the platform.
-4. **Local Data Storage**: User data is stored locally using JSON files.
+Webcam access
 
-## Technologies Used
+Internet connection for installing dependencies
 
-- **Backend**: Flask
-- **Frontend**: HTML, CSS, JavaScript
-- **Chatbot**: GPT-3.5 turbo
-- **Data Storage**: JSON files
+2. Download the Project
+git clone https://github.com/Mallika5c5/Emotion-Detection-and-Interaction-System-for-ASD-using-ML
 
-## Installation
+3. Install Dependencies
+   pip install -r requirements.txt
+   This installs:
 
-To get started with the platform, follow these steps:
+Flask (web server)
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/Mostafa10770/autism-platform.git
-    cd autism-platform
-    ```
+OpenCV (face detection)
 
-2. **Install the required dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+FER or other emotion-recognition libraries
 
-3. **Run the application**:
-    ```bash
+TensorFlow / Keras (backend model)
+
+Any other listed dependencies
+
+4. Launch the Application
+    Start the Flask App
     python app.py
-    ```
+   
+   You should see something like this appear:
+    * Serving Flask app "app.py"
+    * Debug mode: on
+    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
-4. **Open your browser and navigate to**:
-    ```
-    http://127.0.0.1:5000/
-    ```
+5. Open the Frontend
+   http://127.0.0.1:5000/
 
-## Usage
+   in your web browser. You’ll be greeted with:
 
-### User Authentication
+      A Live webcam feed showing your face via OpenCV
 
-1. **Signup**: Create an account by providing a username and password.
-2. **Login**: Access the platform using your credentials.
+      A Chatbot widget 
 
-### Chatbot Interaction
+      A “Emotion History” button to check past emotions
 
-- **Parent Mode**: The chatbot guides parents through a series of questions to help in the early diagnosis of autism.
-- **Child Mode**: The chatbot engages with children with autism as a friendly persona to provide support.
+ 6. Using the App
 
-## Project Structure
+        Allow your browser to access the camera.
 
-```
-autism-platform/
-│
-├── app.py                # Main application file
-├── templates/            # HTML templates
-│   ├── index.html        # Home page
-│   ├── home.html         # User home page
-│   ├── about.html        # About page
-│
-├── static/               # Static files (CSS, JS, images)
-│   └── images/           # Directory for images
-│       ├── overview.png  # Overview image for README
-│       ├── website1.png  # Example website image 1
-│       └── website2.png  # Example website image 2
-│
-├── data/                 # Directory for storing user data
-│   └── users.json        # JSON file for user data
-│
-└── requirements.txt      # Required Python packages
-```
+        Ensure your face is visible in the live feed.
 
-## Examples
+        The app will detect and display your emotion in real time.
+
+        Each emotion is stored in memory for the session (no database).
+
+        Click the History link to see all captured emotions along with timestamps.
+
+        Use the Chatbot to interact, e.g.:
+
+        ->How to make friends?
 
 
-### Website Screenshots
-
-<p align="center">
-  <img src="website1.png" alt="Website Example 1" width="45%" />
-  <img src="website2.png" alt="Website Example 2" width="45%" />
-</p>
-
-
-
-### Chatbot Video
-
-
-Check out this video demonstration of the chatbot in action:
-    
-[![Chatbot Video](https://github.com/Mostafa10770/Autism-Guide/assets/98651655/17023a6b-e7dc-40af-a279-29ec95f0c210)](https://github.com/Mostafa10770/Autism-Guide/assets/98651655/17023a6b-e7dc-40af-a279-29ec95f0c210)
-
-
-
-
-
-
-## Contributing
-
-We welcome contributions to improve this platform. To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For any questions or feedback, please contact:
-- **Name**: Mostafa Hassan
-- **Email**: mustafamagdy2002@gmail.com
-
-Thank you for using the Autism Early Diagnosis and Support Platform! Together, we can make a difference.
+       

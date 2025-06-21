@@ -1,3 +1,22 @@
-Flask==2.0.2
-Flask-WTF==0.15.1
-Flask-Session==0.4.0
+# Web framework
+Flask>=2.0.0
+
+# Core dependencies for image and array processing
+numpy>=1.18.0
+
+# Facial Expression Recognition library
+fer>=22.5.1
+
+# TensorFlow backend for FER (CPU version)
+tensorflow>=2.0.0
+
+# OpenCV for image capture; headless version to avoid GUI dependencies
+opencv-python-headless>=4.0.1
+
+# Optional: full OpenCV with contrib modules (uncomment if needed)
+# opencv-contrib-python>=4.0.1
+
+# Optional dependencies (if using video analysis or related tools)
+moviepy>=1.0.0
+ffmpeg-python>=1.4
+matplotlib>=3.0.0  # useful for plotting/confusion matrices
