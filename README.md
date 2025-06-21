@@ -1,4 +1,5 @@
-Emotion Detection & Interaction System for Autism Spectrum Disorder
+**Emotion Detection & Interaction System for Autism Spectrum Disorder**
+
 A Flask + frontend app that:
 
 Detects faces and recognizes emotions in real time (up to 500 emotion classes).
